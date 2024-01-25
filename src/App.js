@@ -17,7 +17,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ExperienceCard from "./components/Experience/ExperinceCards";
+import ExperienceCard from "./components/Experience/ExperienceCards";
 
 function App() {
   const [load, upadateLoad] = useState(true);
