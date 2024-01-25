@@ -85,6 +85,19 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
+                to="//Experience"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineFundProjectionScreen
+                  style={{ marginBottom: "2px" }}
+                />{" "}
+                Experience
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
@@ -104,7 +117,7 @@ function NavBar() {
 
             <Nav.Item className="fork-btn">
               <Button
-                href="https://github.com/soumyajit4419/Portfolio"
+                href="https://github.com/Shazam6565/Portfolio"
                 target="_blank"
                 className="fork-btn-inner"
               >
