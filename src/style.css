@@ -782,11 +782,395 @@ button:focus {
 .resume-section {
   position: relative !important;
   padding-top: 110px !important;
-  padding-bottom: 30px !important;
+  padding-bottom: 50px !important;
   background-image: var(--section-background-color) !important;
   color: white !important;
 }
 
+/* Resume Header */
+.resume-header {
+  margin-bottom: 40px;
+  padding: 20px 0;
+}
+
+.resume-main-title {
+  font-size: 2.8em !important;
+  font-weight: 700 !important;
+  margin-bottom: 15px !important;
+  color: white !important;
+}
+
+.resume-subtitle {
+  font-size: 1.3em;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 25px;
+}
+
+.download-resume-btn {
+  padding: 12px 35px !important;
+  font-size: 1.1em !important;
+  font-weight: 600 !important;
+  border-radius: 30px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(199, 112, 240, 0.3) !important;
+}
+
+.download-resume-btn:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 20px rgba(199, 112, 240, 0.5) !important;
+}
+
+/* Resume Sections */
+.resume-summary-section,
+.resume-content-section {
+  margin-bottom: 40px;
+}
+
+.resume-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(199, 112, 240, 0.2);
+  border-radius: 15px;
+  padding: 35px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.resume-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(119, 53, 136, 0.3);
+  border-color: rgba(199, 112, 240, 0.4);
+}
+
+.section-title {
+  font-size: 2em;
+  font-weight: 700;
+  color: #c770f0;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.section-icon {
+  font-size: 0.9em;
+  color: #c770f0;
+}
+
+/* Professional Summary */
+.summary-text {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: justify;
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #c770f0 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 30px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -36px;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  background: #c770f0;
+  border: 3px solid rgba(12, 8, 24, 0.904);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(199, 112, 240, 0.2);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-marker {
+  transform: scale(1.3);
+  box-shadow: 0 0 0 6px rgba(199, 112, 240, 0.3);
+}
+
+.timeline-content {
+  background: rgba(199, 112, 240, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 3px solid rgba(199, 112, 240, 0.3);
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  background: rgba(199, 112, 240, 0.08);
+  border-left-color: #c770f0;
+}
+
+.timeline-title {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #c770f0;
+  margin-bottom: 8px;
+}
+
+.timeline-company {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 8px;
+}
+
+.timeline-period {
+  font-size: 0.95em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.timeline-achievements {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.timeline-achievements li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.timeline-achievements li:before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #c770f0;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Skills Section */
+.skill-category {
+  margin-bottom: 35px;
+}
+
+.skill-category:last-child {
+  margin-bottom: 0;
+}
+
+.skill-category-title {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(199, 112, 240, 0.3);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.skill-item {
+  background: rgba(199, 112, 240, 0.05);
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  background: rgba(199, 112, 240, 0.1);
+  transform: translateX(5px);
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.skill-name {
+  font-size: 1em;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.skill-percentage {
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #c770f0;
+}
+
+.skill-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #c770f0 100%);
+  border-radius: 10px;
+  transition: width 1s ease-out;
+  animation: skillLoad 1.5s ease-out;
+  box-shadow: 0 0 10px rgba(199, 112, 240, 0.5);
+}
+
+@keyframes skillLoad {
+  from {
+    width: 0;
+  }
+}
+
+/* Certifications */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.certification-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 20px;
+  background: rgba(199, 112, 240, 0.05);
+  border: 1px solid rgba(199, 112, 240, 0.2);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.certification-item:hover {
+  background: rgba(199, 112, 240, 0.1);
+  border-color: #c770f0;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(199, 112, 240, 0.3);
+}
+
+.cert-icon {
+  font-size: 1.5em;
+  color: #c770f0;
+  flex-shrink: 0;
+}
+
+/* Resume Footer */
+.resume-footer {
+  margin-top: 50px;
+  padding: 30px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .resume-main-title {
+    font-size: 2.3em !important;
+  }
+
+  .section-title {
+    font-size: 1.7em;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .resume-section {
+    padding-top: 80px !important;
+  }
+
+  .resume-main-title {
+    font-size: 1.9em !important;
+  }
+
+  .resume-subtitle {
+    font-size: 1.1em;
+  }
+
+  .resume-card {
+    padding: 25px 20px;
+  }
+
+  .section-title {
+    font-size: 1.5em;
+    gap: 10px;
+  }
+
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-item {
+    padding-left: 20px;
+  }
+
+  .timeline-marker {
+    left: -28px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-title {
+    font-size: 1.2em;
+  }
+
+  .timeline-company {
+    font-size: 1em;
+  }
+
+  .timeline-period {
+    font-size: 0.9em;
+  }
+
+  .timeline-achievements li {
+    font-size: 0.95em;
+  }
+
+  .skill-category-title {
+    font-size: 1.1em;
+  }
+
+  .skills-grid {
+    gap: 15px;
+  }
+
+  .download-resume-btn {
+    padding: 10px 25px !important;
+    font-size: 1em !important;
+  }
+}
+
+/* Old Resume Styles (kept for compatibility) */
 .resume {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -862,6 +1246,7 @@ button:focus {
   background: #fff;
   border: 2px solid #8a49a8;
 }
+
 
 .like-item {
   padding-top: 10px !important;
